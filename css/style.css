@@ -60,6 +60,8 @@ ul {
 
 .site-nav {
   display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .site-nav .item:not(:last-child) {
@@ -82,6 +84,99 @@ ul {
 .site-nav .link:focus {
   color: var(--accent-text-color);
 }
+
+.item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 76px;
+}
+
+.site-nav .current::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+.current .link {
+  color: var(--accent-text-color);
+}
+
+.site-nav-contacts {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.site-nav-contacts li:not(:last-child) {
+  margin-right: 30px;
+}
+
+.header-contacts-link {
+  display: inline-flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.143;
+  letter-spacing: 0.02em;
+  color: var(--primary-taxt-color);
+  text-decoration: none;
+}
+
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--accent-text-color);
+}
+
+.header-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 16px;
+  width: 16px;
+  margin-right: 10px;
+
+  fill: currentColor;
+}
+
+/*.link:after :hover,
+.link:after :focus {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+
+  opacity: 1;
+
+  background-color: #2196f3;
+  border-radius: 2px;
+}*/
+
+/*.link:hover .link:after,
+.link:focus .link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  bottom: 0;
+  left: 0;
+
+  background-color: #2196f3;
+  border-radius: 2px;
+}*/
 
 .site-nav-contacts {
   display: flex;
