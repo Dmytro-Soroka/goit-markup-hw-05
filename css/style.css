@@ -708,11 +708,17 @@ ul {
 
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition-duration: 250ms;
 }
 
 .portfolio-element:hover .portfolio-box-hover,
 .portfolio-element:focus .portfolio-box-hover {
   opacity: 0.9;
+
+  transform: translateY(0);
+  transition-duration: 250ms;
 }
 
 .portfolio-title-container {
