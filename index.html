@@ -62,10 +62,20 @@
         <section class="container hero">
           <div class="hero-container">
             <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-            <button type="button" class="hero-button">
+            <button type="button" class="hero-button" data-modal-open>
               <span class="hero-object">Заказать услугу</span>
           </div>
         </section>
+      </div>
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="modal-close" data-modal-close>
+            <svg class="modal-icon">
+              <use href="./images/index-images/symbol-defs.svg#close-icon"></use>
+            </svg>
+          </button>
+        </div>
       </div>
 
       <!--skills container-->
@@ -156,7 +166,8 @@
       </div>
 
       <!--command container-->
-      <div class="container command-container">
+      <div class="command-container">
+      <div class="container">
         <section class="section">
           <h2 class="section-title">Наша команда</h2>
           <ul class="command">
@@ -323,6 +334,7 @@
           </ul>
         </section>
       </div>
+      </div>
 
       <!--clients container-->
       <div class="container client-container">
@@ -373,7 +385,7 @@
             </li>
           </ul>
         </section>
-      </div>
+      </div>      
     </main>
 
     <!--footer container-->
@@ -438,5 +450,21 @@
         </section>
       </div>
     </footer>
+    
+    <!--script-->
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-modal-open]'),
+        closeModalBtn: document.querySelector('[data-modal-close]'),
+        modal: document.querySelector('[data-modal]'),
+      };
+
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
+
+      function toggleModal() {
+        refs.modal.classList.toggle('is-hidden');
+      }
+    </script>
   </body>
 </html>
